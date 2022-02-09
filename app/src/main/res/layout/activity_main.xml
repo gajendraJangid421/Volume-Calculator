@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D000000"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--    <ScrollView-->
+    <!--        android:id="@+id/sv_vol"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:fillViewport="true">-->
+
+    <LinearLayout
+        android:id="@+id/ll_vol"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_sphere"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginTop="1.5dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ib_sphere"
+                android:layout_width="85dp"
+                android:layout_height="75dp"
+                android:background="@color/white"
+                android:paddingLeft="7dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/cir" />
+
+            <TextView
+                android:id="@+id/tv_sphere"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:clickable="true"
+                android:gravity="left|center"
+                android:paddingLeft="5dp"
+                android:text="Sphere"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_cone"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_below="@id/ll_sphere"
+            android:layout_marginTop="1.5dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ib_cone"
+                android:layout_width="85dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:paddingLeft="5dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="10dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/cone" />
+
+            <TextView
+                android:id="@+id/tv_cone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:clickable="true"
+                android:gravity="left|center"
+                android:paddingLeft="5dp"
+                android:text="Cone"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_cube"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_below="@id/ll_cone"
+            android:layout_marginTop="1.5dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ib_cube"
+                android:layout_width="85dp"
+                android:layout_height="75dp"
+                android:background="@color/white"
+                android:clickable="true"
+                android:paddingLeft="8dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="13dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/cube" />
+
+            <TextView
+                android:id="@+id/tv_cube"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:clickable="true"
+                android:gravity="left|center"
+                android:paddingLeft="5dp"
+                android:text="Cube"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_cuboid"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_below="@id/ll_cube"
+            android:layout_marginTop="1.5dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ib_cuboid"
+                android:layout_width="85dp"
+                android:layout_height="75dp"
+                android:background="@color/white"
+                android:paddingLeft="10dp"
+                android:paddingTop="14dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="13dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/cuboid" />
+
+            <TextView
+                android:id="@+id/tv_cuboid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:clickable="true"
+                android:gravity="left|center"
+                android:paddingLeft="5dp"
+                android:text="Cuboid"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_cylinder"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_below="@id/ll_cuboid"
+            android:layout_marginTop="1.5dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ib_cylinder"
+                android:layout_width="85dp"
+                android:layout_height="75dp"
+                android:background="@color/white"
+                android:paddingLeft="8dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/cyl" />
+
+            <TextView
+                android:id="@+id/tv_cylinder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:clickable="true"
+                android:gravity="left|center"
+                android:paddingLeft="5dp"
+                android:text="Cylinder"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_prism"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_below="@id/ll_cylinder"
+            android:layout_marginTop="1.5dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ib_prism"
+                android:layout_width="85dp"
+                android:layout_height="75dp"
+                android:background="@color/white"
+                android:paddingLeft="8dp"
+                android:paddingTop="10dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/prism" />
+
+            <TextView
+                android:id="@+id/tv_prism"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:clickable="true"
+                android:gravity="left|center"
+                android:paddingLeft="5dp"
+                android:text="Prism"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_pyramid"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_below="@id/ll_prism"
+            android:layout_marginTop="1.5dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ib_pyramid"
+                android:layout_width="85dp"
+                android:layout_height="75dp"
+                android:background="@color/white"
+                android:paddingLeft="8dp"
+                android:paddingTop="11dp"
+                android:paddingBottom="8dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/pyd" />
+
+            <TextView
+                android:id="@+id/tv_pyramid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:clickable="true"
+                android:gravity="left|center"
+                android:paddingLeft="5dp"
+                android:text="Pyramid"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_blankVol"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ll_pyramid"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--    </ScrollView>-->
+
+
+    <FrameLayout
+        android:id="@+id/fl_sphereImg"
+        android:layout_width="310dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_round"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="240dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/sphdia" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="170dp"
+            android:layout_marginRight="10dp"
+            android:text="# Surface Area = 4*π*(Radius^2)\n\n# Volume = 4/3*π*(Radius^3)"
+            android:textColor="#001485"
+            android:textSize="20dp" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bg_round"
+            android:backgroundTint="@color/purple_500"
+            android:onClick="makeAbled"
+            android:text="back" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_coneImg"
+        android:layout_width="350dp"
+        android:layout_height="380dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_round"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="210dp"
+            android:layout_height="210dp"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/conedia" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="220dp"
+            android:layout_marginRight="15dp"
+            android:text="# Surface Area =\n    π*Radius*(Radius+Slant length)\n\n# Volume = (π/3)*(Radius^2)*Height"
+            android:textColor="#001485"
+            android:textSize="20dp" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bg_round"
+            android:backgroundTint="@color/purple_500"
+            android:onClick="makeAbled"
+            android:text="back" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_cubeImg"
+        android:layout_width="301dp"
+        android:layout_height="360dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_round"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="230dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/cubedia" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="220dp"
+            android:layout_marginRight="10dp"
+            android:text="# Surface Area = 6*Side*Side\n\n# Volume = Side*Side*Side"
+            android:textColor="#001485"
+            android:textSize="20dp" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bg_round"
+            android:backgroundTint="@color/purple_500"
+            android:onClick="makeAbled"
+            android:text="back" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_cuboidImg"
+        android:layout_width="342dp"
+        android:layout_height="340dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_round"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/cubddia" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="180dp"
+            android:layout_marginRight="10dp"
+            android:text="# Surface Area = 2*((Length*Width)\n   +(Width*Height)+(Length*Height))\n\n# Volume = Length*Width*Height"
+            android:textColor="#001485"
+            android:textSize="20dp" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bg_round"
+            android:backgroundTint="@color/purple_500"
+            android:onClick="makeAbled"
+            android:text="back" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_cylImg"
+        android:layout_width="280dp"
+        android:layout_height="400dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_round"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="240dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/cyldia" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="220dp"
+            android:layout_marginRight="10dp"
+            android:text="# Surface Area = \n2*π*Radius*(Radius+Height)\n\n# Volume = \n   π*(Radius^2)*Height"
+            android:textColor="#001485"
+            android:textSize="20dp" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bg_round"
+            android:backgroundTint="@color/purple_500"
+            android:onClick="makeAbled"
+            android:text="back" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_prismImg"
+        android:layout_width="357dp"
+        android:layout_height="405dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_round"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="240dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/prismdia" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginRight="10dp"
+            android:text="# Surface Area = (Width*Height)\n    +(Length*Width)\n    +(2*Length)\n    *√(Height^2+(Width/2)^2)\n\n# Volume = 1/2*Length*Width*Height"
+            android:textColor="#001485"
+            android:textSize="20dp" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bg_round"
+            android:backgroundTint="@color/purple_500"
+            android:onClick="makeAbled"
+            android:text="back" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_pyraImg"
+        android:layout_width="330dp"
+        android:layout_height="380dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_round"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="260dp"
+            android:layout_height="175dp"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="15dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pyrdia" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginRight="10dp"
+            android:text="# Surface Area = \n   (Length^2)+2*Length\n    *√(((Length^2)/4)+(Height^2)))\n\n# Volume = 1/3*(Length^2)*Height"
+            android:textColor="#001485"
+            android:textSize="20dp" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bg_round"
+            android:backgroundTint="@color/purple_500"
+            android:onClick="makeAbled"
+            android:text="back" />
+
+    </FrameLayout>
+
+</RelativeLayout>
